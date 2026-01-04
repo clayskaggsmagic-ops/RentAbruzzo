@@ -19,8 +19,8 @@
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.3);
-    /* Slight dark overlay for text contrast */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+    /* Cinematic gradient */
     position: absolute;
     top: 0;
     left: 0;
@@ -38,18 +38,21 @@
 }
 
 .hero-title {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 5.5rem;
+    /* Larger */
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Softer shadow */
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
+    /* Increased spacing */
     margin-bottom: 3rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-scroll-indicator {
@@ -59,7 +62,8 @@
     transform: translateX(-50%);
     font-size: 0.9rem;
     opacity: 0.8;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    /* Increased from 1px */
 }
 
 /* Details */
@@ -76,6 +80,8 @@
     font-size: 3rem;
     margin-bottom: 0.5rem;
     color: var(--color-olive-dark);
+    letter-spacing: 0.05em;
+    /* Added tracking */
 }
 
 .section-title.white {
@@ -113,6 +119,7 @@
     margin-bottom: 1.5rem;
     display: inline-block;
     font-family: var(--font-heading);
+    letter-spacing: 0.05em;
 }
 
 .amenities-list ul {
@@ -134,8 +141,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
     background: white;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    border: 1px solid var(--color-stone-100);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Softer border */
 }
 
 .spec-item {
@@ -143,7 +152,8 @@
     display: flex;
     flex-direction: column;
     padding: 3rem;
-    border: 1px solid var(--color-stone-50);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    /* Softer inner borders */
 }
 
 .spec-number {
@@ -178,10 +188,12 @@
 }
 
 .explore-card {
-    padding: 2rem;
-    border: 1px solid var(--color-stone-200);
-    background: var(--color-stone-50);
-    transition: transform 0.3s ease;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Very subtle border */
+    background: white;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
 }
 
 .explore-card:hover {

@@ -41,7 +41,8 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-stone-50);
   color: var(--color-charcoal);
-  line-height: 1.6;
+  line-height: 1.8;
+  /* Looser line height for elegance */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,7 +55,8 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
+  /* Positive spacing looks more premium */
 }
 
 img {
