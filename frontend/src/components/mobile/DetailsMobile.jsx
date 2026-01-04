@@ -44,8 +44,15 @@ export default function DetailsMobile({ details }) {
                     <div className="explore-feed-mobile">
                         {details.explore.map((item, index) => (
                             <div key={index} className="explore-card-mobile">
-                                <h3 className="explore-title-mobile">{item.title}</h3>
-                                <p className="explore-text-mobile">{item.text}</p>
+                                {item.image && (
+                                    <div className="explore-image-container-mobile">
+                                        <img src={item.image} alt={item.title} className="explore-image-mobile" loading="lazy" />
+                                    </div>
+                                )}
+                                <div className="explore-content-mobile">
+                                    <h3 className="explore-title-mobile">{item.title}</h3>
+                                    <p className="explore-text-mobile">{item.text}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
