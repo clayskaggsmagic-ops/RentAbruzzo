@@ -37,6 +37,20 @@ export default function DetailsMobile({ details }) {
                     </ul>
                 </div>
             </div>
+
+            {details.explore && (
+                <div className="explore-mobile">
+                    <h2 className="section-title-mobile center-mobile">Live the Region</h2>
+                    <div className="explore-feed-mobile">
+                        {details.explore.map((item, index) => (
+                            <div key={index} className="explore-card-mobile">
+                                <h3 className="explore-title-mobile">{item.title}</h3>
+                                <p className="explore-text-mobile">{item.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

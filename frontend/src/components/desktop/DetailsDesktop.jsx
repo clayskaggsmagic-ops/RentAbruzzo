@@ -39,6 +39,20 @@ export default function DetailsDesktop({ details }) {
                     </div>
                 </div>
             </div>
+
+            {details.explore && (
+                <div className="explore-section fade-in-up">
+                    <h2 className="section-title center">Experience Abruzzo</h2>
+                    <div className="explore-grid">
+                        {details.explore.map((item, index) => (
+                            <div key={index} className="explore-card">
+                                <h3 className="explore-title">{item.title}</h3>
+                                <p className="explore-text">{item.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

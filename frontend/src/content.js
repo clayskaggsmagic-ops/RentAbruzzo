@@ -3,7 +3,6 @@ const imagesGlob = import.meta.glob('./assets/images/*.avif', { eager: true });
 
 // Helper to get image URL from the glob object
 const getImage = (name) => {
-  // Try to find the image in the glob keys
   const key = Object.keys(imagesGlob).find(k => k.includes(name));
   return key ? imagesGlob[key].default : null;
 };
@@ -14,7 +13,7 @@ const imgObj = (name, label) => {
   return src ? { src, label } : null;
 };
 
-// Organize images by category with labels
+// Organize images by category
 export const galleryByType = {
   bedroom1: [
     imgObj('Bedroom1_1', 'Bedroom 1'),
@@ -41,9 +40,9 @@ export const galleryByType = {
   ].filter(Boolean),
   exterior: Object.keys(imagesGlob)
     .filter(k => k.includes('Exterior_'))
-    .map((k, i) => ({
+    .map((k) => ({
       src: imagesGlob[k].default,
-      label: 'Exterior & Views'
+      label: 'Exterior & View'
     })),
 };
 
@@ -68,5 +67,19 @@ export const houseDetails = {
   contact: {
     phone: "+1 (828) 458-8712",
     note: "Please contact for availability and rates."
-  }
+  },
+  explore: [
+    {
+      title: "The Village",
+      text: "Perched on a scenic ridge, Castiglione Messer Raimondo offers a window into authentic Italian life. The nearby medieval hamlet of Appignano di Teramo is a treasure trove of stone houses and winding alleys, famous for its 15th-century charm and the evocative Fino River Valley views."
+    },
+    {
+      title: "Nature & Adventure",
+      text: "From the majestic peaks of the Gran Sasso National Park, visible from the ridge, to the pristine beaches of the Adriatic coast just a drive away, the location is a haven for nature lovers. Explore the 'Calanchi di Atri' nature reserve or hike the verdant Fino Valley trails."
+    },
+    {
+      title: "Culinary Heritage",
+      text: "Indulge in the Teramo province's rich gastronomy. Savor 'arrosticini' (local lamb skewers), 'maccheroni alla chitarra', and the prized Montepulciano d'Abruzzo Colline Teramane DOCG wines from nearby vineyards."
+    }
+  ]
 };
