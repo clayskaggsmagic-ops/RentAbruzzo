@@ -12,9 +12,9 @@ export default function HeroDesktop({ details, images }) {
                 <div className="hero-content fade-in-up">
                     <h1 className="hero-title">{details.title}</h1>
                     <p className="hero-subtitle">{details.subtitle}</p>
-                    <div className="hero-scroll-indicator">
-                        <span>Scroll to Explore</span>
-                    </div>
+                </div>
+                <div className="hero-scroll-indicator">
+                    <span>Scroll to Explore</span>
                 </div>
             </div>
         </div>

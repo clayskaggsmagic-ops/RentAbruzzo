@@ -8,6 +8,9 @@ export default function HeroMobile({ details, images }) {
                     <h1 className="hero-title-mobile">{details.title}</h1>
                     <p className="hero-subtitle-mobile">{details.subtitle}</p>
                 </div>
+                <div className="hero-scroll-indicator mobile">
+                    <span>Scroll to Explore</span>
+                </div>
             </div>
         </div>
     );

@@ -7,6 +7,31 @@
 }
 
 /* Hero */
+.hero-scroll-indicator.mobile {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hero-scroll-indicator.mobile::after {
+    content: "↓";
+    font-size: 1.2rem;
+    font-weight: 300;
+    animation: bounce 2s infinite;
+}
+
 .hero-mobile {
     height: 80vh;
     width: 100%;
