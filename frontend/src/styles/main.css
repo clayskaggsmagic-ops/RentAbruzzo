@@ -1,14 +1,19 @@
 /* Global Variables */
 :root {
   /* Palette - High Class Italian / Abruzzo */
-  --color-stone-50: #faf9f6; /* Off-white / Plaster */
+  --color-stone-50: #faf9f6;
+  /* Off-white / Plaster */
   --color-stone-100: #efebe4;
   --color-stone-200: #e2dbd0;
-  --color-olive-dark: #3a4032; /* Deep Olive */
-  --color-olive-light: #8da372; /* Soft Olive for accents */
-  --color-terracotta: #c06c54; /* Muted Terracotta */
+  --color-olive-dark: #3a4032;
+  /* Deep Olive */
+  --color-olive-light: #8da372;
+  /* Soft Olive for accents */
+  --color-terracotta: #c06c54;
+  /* Muted Terracotta */
   --color-terracotta-dark: #9a533f;
-  --color-charcoal: #2c2c2c; /* Text */
+  --color-charcoal: #2c2c2c;
+  /* Text */
   --color-sand: #d6cbb8;
 
   --font-heading: 'Playfair Display', serif;
@@ -19,7 +24,9 @@
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -39,7 +46,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -72,5 +84,82 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Lightbox Styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 80vh;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-stone-200);
+}
+
+.lightbox-caption {
+  margin-top: 1rem;
+  color: var(--color-stone-50);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+/* Mobile Adjustments for Lightbox */
+@media (max-width: 768px) {
+  .lightbox-close {
+    top: -40px;
+    right: 0;
+  }
+
+  .lightbox-caption {
+    font-size: 1.2rem;
   }
 }
