@@ -11,7 +11,6 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* Parallax effect */
     position: relative;
     display: flex;
     align-items: center;
@@ -20,7 +19,6 @@
 
 .hero-overlay {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-    /* Cinematic gradient */
     position: absolute;
     top: 0;
     left: 0;
@@ -34,36 +32,68 @@
 .hero-content {
     text-align: center;
     color: white;
-    max-width: 800px;
+    max-width: 1100px;
+    padding: 0 2rem;
 }
 
 .hero-title {
-    font-size: 5.5rem;
-    /* Larger */
-    margin-bottom: 1.5rem;
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+    line-height: 1.1;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* Softer shadow */
 }
 
 .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 6px;
-    /* Increased spacing */
-    margin-bottom: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 0;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-scroll-indicator {
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.9rem;
-    opacity: 0.8;
-    letter-spacing: 2px;
-    /* Increased from 1px */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.hero-scroll-indicator::after {
+    content: "↓";
+    font-size: 1.5rem;
+    font-weight: 300;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-5px);
+    }
+
+    60% {
+        transform: translateY(-3px);
+    }
 }
 
 /* Details */
@@ -81,7 +111,6 @@
     margin-bottom: 0.5rem;
     color: var(--color-olive-dark);
     letter-spacing: 0.05em;
-    /* Added tracking */
 }
 
 .section-title.white {
@@ -142,9 +171,7 @@
     gap: 0;
     background: white;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
-    /* Softer shadow */
     border: 1px solid rgba(0, 0, 0, 0.05);
-    /* Softer border */
 }
 
 .spec-item {
@@ -153,7 +180,6 @@
     flex-direction: column;
     padding: 3rem;
     border: 1px solid rgba(0, 0, 0, 0.03);
-    /* Softer inner borders */
 }
 
 .spec-number {
@@ -190,7 +216,6 @@
 .explore-card {
     padding: 3rem 2rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    /* Very subtle border */
     background: white;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);

@@ -31,19 +31,24 @@
 .hero-content-mobile {
     text-align: center;
     color: white;
+    max-width: 90%;
 }
 
 .hero-title-mobile {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    /* Adjusted for better fit */
+    margin-bottom: 1rem;
     line-height: 1.2;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle-mobile {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Shared Titles */
