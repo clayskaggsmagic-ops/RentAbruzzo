@@ -1,5 +1,5 @@
-// Load all images eagerly
-const imagesGlob = import.meta.glob('./assets/images/*.avif', { eager: true });
+// Load all images eagerly (Avif + Jpg)
+const imagesGlob = import.meta.glob('./assets/images/*.{avif,jpg}', { eager: true });
 
 // Helper to get image URL from the glob object
 const getImage = (name) => {
@@ -12,6 +12,25 @@ const imgObj = (name, label) => {
   const src = getImage(name);
   return src ? { src, label } : null;
 };
+
+// Build Exterior list manually to force Hero_Main first
+const exteriorImages = [];
+
+// 1. Add the new Hero image first
+const heroImg = getImage('Hero_Main');
+if (heroImg) {
+  exteriorImages.push({ src: heroImg, label: 'Breathtaking View' });
+}
+
+// 2. Add the rest of the exterior images
+Object.keys(imagesGlob).forEach(key => {
+  if (key.includes('Exterior_') && !key.includes('Hero_Main')) {
+    exteriorImages.push({
+      src: imagesGlob[key].default,
+      label: 'Exterior & View'
+    });
+  }
+});
 
 // Organize images by category
 export const galleryByType = {
@@ -38,12 +57,7 @@ export const galleryByType = {
     imgObj('Livingroom_2', 'Living Room'),
     imgObj('LivingRoom_3', 'Living Room'),
   ].filter(Boolean),
-  exterior: Object.keys(imagesGlob)
-    .filter(k => k.includes('Exterior_'))
-    .map((k) => ({
-      src: imagesGlob[k].default,
-      label: 'Exterior & View'
-    })),
+  exterior: exteriorImages
 };
 
 export const houseDetails = {
