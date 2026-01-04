@@ -16,6 +16,13 @@ const imgObj = (name, label) => {
 // Export Hero Image explicitly
 export const heroImage = getImage('Hero_Main');
 
+// Get Explore Images
+const exploreImages = {
+  village: getImage('Explore_Village'),
+  nature: getImage('Explore_Nature'),
+  food: getImage('Explore_Food'),
+};
+
 // Build Exterior list manually
 const exteriorImages = [];
 
@@ -26,7 +33,7 @@ Object.keys(imagesGlob).forEach(key => {
   if (key.includes('Exterior_') && !key.includes('Hero_Main')) {
     exteriorImages.push({
       src: imagesGlob[key].default,
-      label: 'Additional Photo' // Updated tag
+      label: 'Additional Photo'
     });
   }
 });
@@ -39,8 +46,8 @@ export const galleryByType = {
   ].filter(Boolean),
   bedroom2: [
     imgObj('Bedroom2', 'Bedroom 2'),
-    imgObj('Bedroom1_3', 'Bedroom 2'), // Moved per request
-    imgObj('Bedroom1_4', 'Bedroom 2'), // Moved per request
+    imgObj('Bedroom1_3', 'Bedroom 2'),
+    imgObj('Bedroom1_4', 'Bedroom 2'),
   ].filter(Boolean),
   bathroom: [
     imgObj('FullBathroom1_1', 'Full Bathroom 1'),
@@ -84,14 +91,17 @@ export const houseDetails = {
   explore: [
     {
       title: "The Village",
+      image: exploreImages.village,
       text: "Perched on a scenic ridge, Castiglione Messer Raimondo offers a window into authentic Italian life. The nearby medieval hamlet of Appignano di Teramo is a treasure trove of stone houses and winding alleys, famous for its 15th-century charm and the evocative Fino River Valley views."
     },
     {
       title: "Nature & Adventure",
+      image: exploreImages.nature,
       text: "From the majestic peaks of the Gran Sasso National Park, visible from the ridge, to the pristine beaches of the Adriatic coast just a drive away, the location is a haven for nature lovers. Explore the 'Calanchi di Atri' nature reserve or hike the verdant Fino Valley trails."
     },
     {
       title: "Culinary Heritage",
+      image: exploreImages.food,
       text: "Indulge in the Teramo province's rich gastronomy. Savor 'arrosticini' (local lamb skewers), 'maccheroni alla chitarra', and the prized Montepulciano d'Abruzzo Colline Teramane DOCG wines from nearby vineyards."
     }
   ]

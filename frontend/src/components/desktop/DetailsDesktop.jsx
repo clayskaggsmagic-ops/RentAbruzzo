@@ -46,8 +46,15 @@ export default function DetailsDesktop({ details }) {
                     <div className="explore-grid">
                         {details.explore.map((item, index) => (
                             <div key={index} className="explore-card">
-                                <h3 className="explore-title">{item.title}</h3>
-                                <p className="explore-text">{item.text}</p>
+                                {item.image && (
+                                    <div className="explore-image-container">
+                                        <img src={item.image} alt={item.title} className="explore-image" loading="lazy" />
+                                    </div>
+                                )}
+                                <div className="explore-content">
+                                    <h3 className="explore-title">{item.title}</h3>
+                                    <p className="explore-text">{item.text}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
