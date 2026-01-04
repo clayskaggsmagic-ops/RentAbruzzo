@@ -19,6 +19,7 @@ export default function GalleryMobile({ gallery }) {
     } else {
         displayedImages = gallery[activeTab] || [];
     }
+
     displayedImages = [...new Set(displayedImages)];
 
     return (
@@ -39,9 +40,12 @@ export default function GalleryMobile({ gallery }) {
             </div>
 
             <div className="gallery-feed-mobile">
-                {displayedImages.map((src, index) => (
+                {displayedImages.map((item, index) => (
                     <div key={index} className="gallery-item-mobile">
-                        <img src={src} alt={`Gallery image ${index + 1}`} loading="lazy" />
+                        <img src={item.src} alt={item.label} loading="lazy" />
+                        <div className="gallery-label-mobile">
+                            {item.label}
+                        </div>
                     </div>
                 ))}
             </div>

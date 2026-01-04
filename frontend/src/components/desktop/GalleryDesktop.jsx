@@ -12,10 +12,8 @@ export default function GalleryDesktop({ gallery }) {
         { id: 'exterior', label: 'Exterior' },
     ];
 
-    // Flatten logic or selective logic
     let displayedImages = [];
     if (activeTab === 'all') {
-        // Combine all arrays
         Object.values(gallery).forEach(arr => displayedImages.push(...arr));
     } else if (activeTab === 'bedrooms') {
         displayedImages = [...gallery.bedroom1, ...gallery.bedroom2];
@@ -23,7 +21,7 @@ export default function GalleryDesktop({ gallery }) {
         displayedImages = gallery[activeTab] || [];
     }
 
-    // Deduplicate just in case
+    // Deduplicate
     displayedImages = [...new Set(displayedImages)];
 
     return (
@@ -44,9 +42,12 @@ export default function GalleryDesktop({ gallery }) {
             </div>
 
             <div className="gallery-grid fade-in-up">
-                {displayedImages.map((src, index) => (
+                {displayedImages.map((item, index) => (
                     <div key={index} className="gallery-item">
-                        <img src={src} alt={`Gallery image ${index + 1}`} loading="lazy" />
+                        <img src={item.src} alt={item.label} loading="lazy" />
+                        <div className="gallery-overlay">
+                            <span className="gallery-label">{item.label}</span>
+                        </div>
                     </div>
                 ))}
             </div>

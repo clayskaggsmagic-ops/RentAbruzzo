@@ -8,34 +8,43 @@ const getImage = (name) => {
   return key ? imagesGlob[key].default : null;
 };
 
-// Organize images by category
+// Start Helper to build object
+const imgObj = (name, label) => {
+  const src = getImage(name);
+  return src ? { src, label } : null;
+};
+
+// Organize images by category with labels
 export const galleryByType = {
   bedroom1: [
-    getImage('Bedroom1_1'),
-    getImage('Bedroom1_2'),
-    getImage('Bedroom1_3'),
-    getImage('Bedroom1_4'),
+    imgObj('Bedroom1_1', 'Bedroom 1'),
+    imgObj('Bedroom1_2', 'Bedroom 1'),
+    imgObj('Bedroom1_3', 'Bedroom 1'),
+    imgObj('Bedroom1_4', 'Bedroom 1'),
   ].filter(Boolean),
   bedroom2: [
-    getImage('Bedroom2'),
+    imgObj('Bedroom2', 'Bedroom 2'),
   ].filter(Boolean),
   bathroom: [
-    getImage('FullBathroom1_1'),
-    getImage('FullBathroom1_2'),
-    getImage('FullBathroom2'),
-    getImage('FullBathroom3'),
+    imgObj('FullBathroom1_1', 'Full Bathroom 1'),
+    imgObj('FullBathroom1_2', 'Full Bathroom 1'),
+    imgObj('FullBathroom2', 'Full Bathroom 2'),
+    imgObj('FullBathroom3', 'Full Bathroom 3'),
   ].filter(Boolean),
   kitchen: [
-    getImage('FullKitchen'),
+    imgObj('FullKitchen', 'Gourmet Kitchen'),
   ].filter(Boolean),
   living: [
-    getImage('LivingRoom_1'),
-    getImage('Livingroom_2'),
-    getImage('LivingRoom_3'),
+    imgObj('LivingRoom_1', 'Living Room'),
+    imgObj('Livingroom_2', 'Living Room'),
+    imgObj('LivingRoom_3', 'Living Room'),
   ].filter(Boolean),
   exterior: Object.keys(imagesGlob)
     .filter(k => k.includes('Exterior_'))
-    .map(k => imagesGlob[k].default),
+    .map((k, i) => ({
+      src: imagesGlob[k].default,
+      label: 'Exterior & Views'
+    })),
 };
 
 export const houseDetails = {
