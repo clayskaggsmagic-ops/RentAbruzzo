@@ -7,7 +7,6 @@ export default function ContactDesktop({ contact }) {
                 <a href={`tel:${contact.phone}`} className="contact-phone">
                     {contact.phone}
                 </a>
-                <div className="contact-divider"></div>
             </div>
         </footer>
     );
