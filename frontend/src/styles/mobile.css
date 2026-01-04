@@ -1,0 +1,220 @@
+/* Mobile Specific Styles */
+.mobile-app {
+    display: block;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 2rem;
+}
+
+/* Hero */
+.hero-mobile {
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay-mobile {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.hero-content-mobile {
+    text-align: center;
+    color: white;
+}
+
+.hero-title-mobile {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle-mobile {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* Shared Titles */
+.section-title-mobile {
+    font-size: 2rem;
+    color: var(--color-olive-dark);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.section-title-mobile.white {
+    color: var(--color-stone-50);
+}
+
+/* Details */
+.details-mobile {
+    padding: 4rem 0;
+}
+
+.details-header-mobile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.details-location-mobile {
+    color: var(--color-terracotta);
+    font-style: italic;
+}
+
+.details-specs-mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.spec-item-mobile {
+    background: white;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--color-stone-200);
+    border-radius: 4px;
+}
+
+.spec-number-mobile {
+    display: block;
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    color: var(--color-olive-dark);
+}
+
+.spec-label-mobile {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-charcoal);
+    letter-spacing: 1px;
+}
+
+.details-text-mobile {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.amenities-list-mobile {
+    margin-top: 2rem;
+}
+
+.amenities-list-mobile h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    border-bottom: 1px solid var(--color-stone-200);
+    padding-bottom: 0.5rem;
+}
+
+.amenities-list-mobile ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.amenities-list-mobile li {
+    margin-bottom: 0.5rem;
+}
+
+.amenities-list-mobile li::before {
+    content: "•";
+    color: var(--color-terracotta);
+    margin-right: 0.5rem;
+}
+
+/* Gallery */
+.gallery-mobile {
+    padding-bottom: 4rem;
+}
+
+.gallery-tabs-mobile-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.gallery-tabs-mobile-scroll::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.tab-btn-mobile {
+    background: none;
+    border: 1px solid var(--color-stone-200);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+}
+
+.tab-btn-mobile.active {
+    background: var(--color-olive-dark);
+    color: white;
+    border-color: var(--color-olive-dark);
+}
+
+.gallery-feed-mobile {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.gallery-item-mobile img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contact */
+.contact-mobile {
+    background: var(--color-olive-dark);
+    color: var(--color-stone-50);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-note-mobile {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.contact-button-mobile {
+    display: block;
+    width: 100%;
+    background: var(--color-stone-50);
+    color: var(--color-olive-dark);
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-number-display {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.copyright-mobile {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}

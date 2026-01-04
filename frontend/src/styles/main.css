@@ -1,0 +1,76 @@
+/* Global Variables */
+:root {
+  /* Palette - High Class Italian / Abruzzo */
+  --color-stone-50: #faf9f6; /* Off-white / Plaster */
+  --color-stone-100: #efebe4;
+  --color-stone-200: #e2dbd0;
+  --color-olive-dark: #3a4032; /* Deep Olive */
+  --color-olive-light: #8da372; /* Soft Olive for accents */
+  --color-terracotta: #c06c54; /* Muted Terracotta */
+  --color-terracotta-dark: #9a533f;
+  --color-charcoal: #2c2c2c; /* Text */
+  --color-sand: #d6cbb8;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+
+  --transition-slow: 0.6s ease;
+  --transition-medium: 0.3s ease;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-stone-50);
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
