@@ -8,7 +8,6 @@ export default function ContactDesktop({ contact }) {
                     {contact.phone}
                 </a>
                 <div className="contact-divider"></div>
-                <p className="copyright">© {new Date().getFullYear()} Castiglione Messer Raimondo Retreat</p>
             </div>
         </footer>
     );

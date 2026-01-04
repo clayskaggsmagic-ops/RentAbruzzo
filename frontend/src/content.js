@@ -13,21 +13,17 @@ const imgObj = (name, label) => {
   return src ? { src, label } : null;
 };
 
-// Build Exterior list manually to force Hero_Main first
+// Build Exterior list manually
 const exteriorImages = [];
 
-// 1. Add the new Hero image first
-const heroImg = getImage('Hero_Main');
-if (heroImg) {
-  exteriorImages.push({ src: heroImg, label: 'Breathtaking View' });
-}
+// Note: Hero_Main removed from gallery as requested
 
 // 2. Add the rest of the exterior images
 Object.keys(imagesGlob).forEach(key => {
   if (key.includes('Exterior_') && !key.includes('Hero_Main')) {
     exteriorImages.push({
       src: imagesGlob[key].default,
-      label: 'Exterior & View'
+      label: 'Additional Photo' // Updated tag
     });
   }
 });
@@ -37,11 +33,11 @@ export const galleryByType = {
   bedroom1: [
     imgObj('Bedroom1_1', 'Bedroom 1'),
     imgObj('Bedroom1_2', 'Bedroom 1'),
-    imgObj('Bedroom1_3', 'Bedroom 1'),
-    imgObj('Bedroom1_4', 'Bedroom 1'),
   ].filter(Boolean),
   bedroom2: [
     imgObj('Bedroom2', 'Bedroom 2'),
+    imgObj('Bedroom1_3', 'Bedroom 2'), // Moved per request
+    imgObj('Bedroom1_4', 'Bedroom 2'), // Moved per request
   ].filter(Boolean),
   bathroom: [
     imgObj('FullBathroom1_1', 'Full Bathroom 1'),

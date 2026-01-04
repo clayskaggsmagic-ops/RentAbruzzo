@@ -11,7 +11,7 @@ export default function GalleryMobile({ gallery }) {
         { id: 'bedrooms', label: 'Bedrooms' },
         { id: 'kitchen', label: 'Kitchen' },
         { id: 'bathroom', label: 'Baths' },
-        { id: 'exterior', label: 'Exterior' },
+        { id: 'exterior', label: 'Additional Photos' }, // Renamed
     ];
 
     let displayedImages = [];

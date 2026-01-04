@@ -12,7 +12,7 @@ export default function GalleryDesktop({ gallery }) {
         { id: 'living', label: 'Living Areas' },
         { id: 'kitchen', label: 'Kitchen' },
         { id: 'bathroom', label: 'Bathrooms' },
-        { id: 'exterior', label: 'Exterior' },
+        { id: 'exterior', label: 'Additional Photos' }, // Renamed
     ];
 
     let displayedImages = [];

@@ -8,7 +8,6 @@ export default function ContactMobile({ contact }) {
                     Call to Book
                 </a>
                 <p className="contact-number-display">{contact.phone}</p>
-                <p className="copyright-mobile">© {new Date().getFullYear()}</p>
             </div>
         </footer>
     );
