@@ -13,6 +13,9 @@ const imgObj = (name, label) => {
   return src ? { src, label } : null;
 };
 
+// Export Hero Image explicitly
+export const heroImage = getImage('Hero_Main');
+
 // Build Exterior list manually
 const exteriorImages = [];
 

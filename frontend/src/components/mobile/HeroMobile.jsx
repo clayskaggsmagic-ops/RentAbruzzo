@@ -1,5 +1,5 @@
-export default function HeroMobile({ details, images }) {
-    const bgImage = images[0]?.src;
+export default function HeroMobile({ details, heroImage }) {
+    const bgImage = heroImage;
 
     return (
         <div className="hero-mobile" style={{ backgroundImage: `url(${bgImage})` }}>
