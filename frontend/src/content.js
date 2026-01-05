@@ -71,6 +71,14 @@ export const houseDetails = {
   subtitle: "A refined sanctuary in the hills of Abruzzo",
   location: "Castiglione Messer Raimondo, Italy",
   description: "Newly renovated home in hills of Abruzzo close to the picturesque medieval town of Appignano di Teramo. Beautiful views over the hilltowns with access to the sea and mountains.",
+  address: {
+    line1: "Contrada Colli, Frazione Appignano",
+    line2: "Castiglione Messer Raimondo (TE)",
+    coordinates: {
+      lat: "42.554056", // 42°33'14.6"N
+      lng: "13.837778"  // 13°50'16.0"E
+    }
+  },
   specs: {
     guests: 8,
     bedrooms: 4,

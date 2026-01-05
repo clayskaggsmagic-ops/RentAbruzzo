@@ -227,6 +227,65 @@
     opacity: 0.9;
 }
 
+
+/* Location Mobile */
+.location-mobile {
+    padding: 4rem 0;
+    background-color: var(--color-stone-50);
+}
+
+.location-header-mobile {
+    margin-bottom: 2rem;
+}
+
+.map-card-mobile {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.map-container-mobile {
+    width: 100%;
+    height: 250px;
+    background: #eee;
+}
+
+.location-info-mobile {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.address-text-mobile {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-charcoal);
+    line-height: 1.5;
+}
+
+.directions-btn-mobile {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background: var(--color-terracotta);
+    /* Action color */
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-family: var(--font-heading);
+    border-radius: 4px;
+    /* Consistent slight round */
+    transition: background 0.3s ease;
+}
+
+.directions-btn-mobile:active {
+    background: #b34b3b;
+    /* Darker terracotta */
+}
+
 /* Gallery */
 .gallery-mobile {
     padding-bottom: 4rem;
