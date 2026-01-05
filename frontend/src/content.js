@@ -67,7 +67,7 @@ export const galleryByType = {
 };
 
 export const houseDetails = {
-  title: "Appignano di Teramo Retreat",
+  title: "Appignano Retreat",
   subtitle: "A refined sanctuary in the hills of Abruzzo",
   location: "Castiglione Messer Raimondo, Italy",
   description: "Newly renovated home in hills of Abruzzo close to the picturesque medieval town of Appignano di Teramo. Beautiful views over the hilltowns with access to the sea and mountains.",
