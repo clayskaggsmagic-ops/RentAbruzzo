@@ -204,7 +204,8 @@
 
 /* Location Section */
 .location-desktop {
-    padding: 5rem 0 8rem 0;
+    padding: 3rem 0 8rem 0;
+    /* Reduced top padding further from 5rem to 3rem */
     /* Reduced top padding from 8rem to 5rem */
     background-color: var(--color-stone-50);
     /* Subtle contrast background */
@@ -349,7 +350,8 @@
 
 /* Gallery */
 .gallery-desktop {
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
+    /* Adjusted to 4rem per user request */
 }
 
 .gallery-header {
