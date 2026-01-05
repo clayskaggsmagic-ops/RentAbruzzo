@@ -34,7 +34,7 @@ export default function GalleryMobile({ gallery }) {
         <>
             <section className="gallery-mobile">
                 <div className="container">
-                    <h2 className="section-title-mobile">Gallery</h2>
+                    <h2 className="section-title-mobile center-mobile">Gallery</h2>
                     <div className="gallery-tabs-mobile-scroll">
                         {categories.map(cat => (
                             <button
