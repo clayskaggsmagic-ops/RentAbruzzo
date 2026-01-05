@@ -117,6 +117,10 @@
     color: var(--color-stone-50);
 }
 
+.section-title.center {
+    text-align: center;
+}
+
 .details-location {
     font-size: 1.3rem;
     color: var(--color-terracotta);
