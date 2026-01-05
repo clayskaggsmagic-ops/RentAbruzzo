@@ -387,10 +387,27 @@
     border: none;
 }
 
+.contact-footer-mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
 .contact-number-display {
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+.contact-email-mobile {
+    font-size: 0.9rem;
+    color: var(--color-stone-50);
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 .copyright-mobile {

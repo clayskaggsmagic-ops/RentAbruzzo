@@ -26,6 +26,15 @@ export default function GalleryDesktop({ gallery }) {
 
     displayedImages = [...new Set(displayedImages)];
 
+    // Custom Sort: Move Exterior_7 to the front for 'All' view
+    if (activeTab === 'all') {
+        const featuredIndex = displayedImages.findIndex(img => img.src.includes('Exterior_7'));
+        if (featuredIndex > -1) {
+            const featured = displayedImages.splice(featuredIndex, 1)[0];
+            displayedImages.unshift(featured);
+        }
+    }
+
     const openLightbox = (img) => {
         setLightboxImage(img);
         setIsLightboxOpen(true);

@@ -4,9 +4,14 @@ export default function ContactDesktop({ contact }) {
             <div className="container contact-content">
                 <h2 className="section-title white">Reserve Your Stay</h2>
                 <p className="contact-note">{contact.note}</p>
-                <a href={`tel:${contact.phone}`} className="contact-phone">
-                    {contact.phone}
-                </a>
+                <div className="contact-actions">
+                    <a href={`tel:${contact.phone}`} className="contact-action">
+                        {contact.phone}
+                    </a>
+                    <a href={`mailto:${contact.email}`} className="contact-action">
+                        {contact.email}
+                    </a>
+                </div>
             </div>
         </footer>
     );

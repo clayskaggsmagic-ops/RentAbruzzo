@@ -7,7 +7,10 @@ export default function ContactMobile({ contact }) {
                 <a href={`tel:${contact.phone}`} className="contact-button-mobile">
                     Call to Book
                 </a>
-                <p className="contact-number-display">{contact.phone}</p>
+                <div className="contact-footer-mobile">
+                    <p className="contact-number-display">{contact.phone}</p>
+                    <a href={`mailto:${contact.email}`} className="contact-email-mobile">{contact.email}</a>
+                </div>
             </div>
         </footer>
     );

@@ -94,6 +94,7 @@ export const houseDetails = {
   ],
   contact: {
     phone: "+1 (828) 458-8712",
+    email: "josh@rentabruzzo.com",
     note: "Please contact for availability and rates."
   },
   explore: [
